@@ -44,8 +44,8 @@ int main() {
     printf("Code: %s\n", codeA);
     printf("City Name: %s\n", cityNameA);
     printf("Population: %d\n", populationA);
-    printf("Area: %.2f\n", areaA);
-    printf("PIB: %.2f\n", pibA);
+    printf("Area: %d\n", areaA);
+    printf("PIB: %d\n", pibA);
     printf("Tourist areas: %d\n", numberTouristPointsA);
 
     //City B
