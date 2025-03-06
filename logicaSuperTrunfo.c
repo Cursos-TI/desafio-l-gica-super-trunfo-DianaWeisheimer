@@ -19,7 +19,8 @@ int main() {
     int populationB, numberTouristPointsB;
     float areaB, pibB;
 
-    int scoreA, scoreB;
+    int scoreA = 0;
+    int scoreB = 0;
 
     //City A
 
@@ -30,22 +31,22 @@ int main() {
     printf("Enter the city name for city A: ");
     scanf("%s", cityNameA);
     printf("Enter the population for city A: ");
-    scanf("%i", &populationA);
+    scanf("%d", &populationA);
     printf("Enter the area for city A: ");
     scanf("%f", &areaA);
     printf("Enter the pib for city A: ");
     scanf("%f", &pibA);
     printf("Enter the number of tourist points for city A: ");
-    scanf("%i", &numberTouristPointsA);
+    scanf("%d", &numberTouristPointsA);
 
     printf("City 'A' Card Stats:\n");
-    printf("State: \n", stateA);
-    printf("Code: \n", codeA);
-    printf("City Name: \n", cityNameA);
-    printf("Population: \n", populationA);
-    printf("Area: \n", areaA);
-    printf("PIB: \n", pibA);
-    printf("Tourist areas: \n", numberTouristPointsA);
+    printf("State: %s\n", stateA);
+    printf("Code: %s\n", codeA);
+    printf("City Name: %s\n", cityNameA);
+    printf("Population: %d\n", populationA);
+    printf("Area: %.2f\n", areaA);
+    printf("PIB: %.2f\n", pibA);
+    printf("Tourist areas: %d\n", numberTouristPointsA);
 
     //City B
 
@@ -56,22 +57,22 @@ int main() {
     printf("Enter the city name for city B: ");
     scanf("%s", cityNameB);
     printf("Enter the population for city B: ");
-    scanf("%i", &populationB);
+    scanf("%d", &populationB);
     printf("Enter the area for city B: ");
     scanf("%f", &areaB);
     printf("Enter the pib for city B: ");
     scanf("%f", &pibB);
     printf("Enter the number of tourist points for city B: ");
-    scanf("%i", &numberTouristPointsB);
-    //EU, UAE, PROD3, JP, IN
+    scanf("%d", &numberTouristPointsB);
+
     printf("City 'B' Card Stats:\n");
-    printf("State: \n", stateB);
-    printf("Code: \n", codeB);
-    printf("City Name: \n", cityNameB);
-    printf("Population: \n", populationB);
-    printf("Area: \n", areaB);
-    printf("PIB: \n", pibB);
-    printf("Tourist areas: \n", numberTouristPointsB);
+    printf("State: %s\n", stateB);
+    printf("Code: %s\n", codeB);
+    printf("City Name: %s\n", cityNameB);
+    printf("Population: %d\n", populationB);
+    printf("Area: %d\n", areaB);
+    printf("PIB: %d\n", pibB);
+    printf("Tourist areas: %d\n", numberTouristPointsB);
     
     if(populationA > populationB){
         scoreA++;
@@ -104,42 +105,9 @@ int main() {
     }
 
     printf("Scores: \n");
-    printf("City A: \n", scoreA);
-    printf("City B: \n", scoreB);
+    printf("City A: %d\n", scoreA);
+    printf("City B: %d\n", scoreB);
     printf("Score Table: Population +1; Area +2; PIB +3, Tourist Points +4;\n");
-
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
-
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
-
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     return 0;
 }
