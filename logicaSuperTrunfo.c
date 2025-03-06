@@ -23,7 +23,7 @@ int main() {
     printf("Enter the code for city A: ");
     scanf("%s", codeA);
     printf("Enter the city name for city A: ");
-    scanf("%s", cityNameA);
+    scanf(" %s", cityNameA);
     printf("Enter the population for city A: ");
     scanf("%d", &populationA);
     printf("Enter the area for city A: ");
@@ -41,11 +41,11 @@ int main() {
     printf("Code: %s\n", codeA);
     printf("City Name: %s\n", cityNameA);
     printf("Population: %d\n", populationA);
-    printf("Area: %d\n", areaA);
-    printf("PIB: %d\n", pibA);
+    printf("Area: %.2f\n", areaA);
+    printf("PIB: %.2f\n", pibA);
     printf("Tourist areas: %d\n", numberTouristPointsA);
-    printf("Population Density: %f\n", populationDensityA);
-    printf("PIB per Capita: %f\n", pibPerCapitaA);
+    printf("Population Density: %.2f\n", populationDensityA);
+    printf("PIB per Capita: %.2f\n", pibPerCapitaA);
 
     //Carta B
 
@@ -54,7 +54,7 @@ int main() {
     printf("Enter the code for city B: ");
     scanf("%s", codeB);
     printf("Enter the city name for city B: ");
-    scanf("%s", cityNameB);
+    scanf(" %s", cityNameB);
     printf("Enter the population for city B: ");
     scanf("%d", &populationB);
     printf("Enter the area for city B: ");
@@ -72,16 +72,16 @@ int main() {
     printf("Code: %s\n", codeB);
     printf("City Name: %s\n", cityNameB);
     printf("Population: %d\n", populationB);
-    printf("Area: %d\n", areaB);
-    printf("PIB: %d\n", pibB);
+    printf("Area: %.2f\n", areaB);
+    printf("PIB: %.2f\n", pibB);
     printf("Tourist areas: %d\n", numberTouristPointsB);
-    printf("Population Density: %f\n", populationDensityB);
-    printf("PIB per Capita: %f\n", pibPerCapitaB);
+    printf("Population Density: %.2f\n", populationDensityB);
+    printf("PIB per Capita: %.2f\n", pibPerCapitaB);
     
     //Comparação de cartas
 
-    printf("Carta 1 PIB per capita - %s (%s): %f\n", cityNameA, stateA, pibPerCapitaA);
-    printf("Carta 2 PIB per capita - %s (%s): %f\n", cityNameB, stateB, pibPerCapitaB);
+    printf("Carta 1 PIB per capita - %s (%s): %.2f\n", cityNameA, stateA, pibPerCapitaA);
+    printf("Carta 2 PIB per capita - %s (%s): %.2f\n", cityNameB, stateB, pibPerCapitaB);
 
     //Resultado
 
