@@ -1,16 +1,7 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
+    // Variaveis
     char stateA[50], codeA[50], cityNameA[50];
     int populationA, numberTouristPointsA;
     float areaA, pibA;
@@ -19,10 +10,13 @@ int main() {
     int populationB, numberTouristPointsB;
     float areaB, pibB;
 
-    int scoreA = 0;
-    int scoreB = 0;
+    float pibPerCapitaA = 0;
+    float pibPerCapitaB = 0;
 
-    //City A
+    float populationDensityA = 0;
+    float populationDensityB = 0;
+
+    //Carta A
 
     printf("Enter the state for city A: ");
     scanf("%s", stateA);
@@ -39,6 +33,9 @@ int main() {
     printf("Enter the number of tourist points for city A: ");
     scanf("%d", &numberTouristPointsA);
 
+    populationDensityA = populationA / areaA;
+    pibPerCapitaA = pibA / populationA;
+
     printf("City 'A' Card Stats:\n");
     printf("State: %s\n", stateA);
     printf("Code: %s\n", codeA);
@@ -47,8 +44,10 @@ int main() {
     printf("Area: %d\n", areaA);
     printf("PIB: %d\n", pibA);
     printf("Tourist areas: %d\n", numberTouristPointsA);
+    printf("Population Density: %f\n", populationDensityA);
+    printf("PIB per Capita: %f\n", pibPerCapitaA);
 
-    //City B
+    //Carta B
 
     printf("Enter the state for city B: ");
     scanf("%s", stateB);
@@ -65,6 +64,9 @@ int main() {
     printf("Enter the number of tourist points for city B: ");
     scanf("%d", &numberTouristPointsB);
 
+    populationDensityB = populationB / areaB;
+    pibPerCapitaB = pibB / populationB;
+
     printf("City 'B' Card Stats:\n");
     printf("State: %s\n", stateB);
     printf("Code: %s\n", codeB);
@@ -73,41 +75,23 @@ int main() {
     printf("Area: %d\n", areaB);
     printf("PIB: %d\n", pibB);
     printf("Tourist areas: %d\n", numberTouristPointsB);
+    printf("Population Density: %f\n", populationDensityB);
+    printf("PIB per Capita: %f\n", pibPerCapitaB);
     
-    if(populationA > populationB){
-        scoreA++;
-    }else{
-        scoreB++;
-    }
+    //Comparação de cartas
 
-    if(areaA > areaB){
-        scoreA += 2;
-    }else{
-        scoreB += 2;
-    }
+    printf("Carta 1 PIB per capita - %s (%s): %f\n", cityNameA, stateA, pibPerCapitaA);
+    printf("Carta 2 PIB per capita - %s (%s): %f\n", cityNameB, stateB, pibPerCapitaB);
 
-    if (pibA > pibB){
-        scoreA += 3;
-    }else{
-        scoreB += 3;
-    }
-    
-    if(numberTouristPointsA > numberTouristPointsB){
-        scoreA += 3;
-    }else{
-        scoreB += 3;
-    }
-    
-    if(scoreA > scoreB){
-        printf("City A is the champignon hehe!!!!\n");
-    }else{
-        printf("City B is the champignon uauuuu :O!!!!\n");
-    }
+    //Resultado
 
-    printf("Scores: \n");
-    printf("City A: %d\n", scoreA);
-    printf("City B: %d\n", scoreB);
-    printf("Score Table: Population +1; Area +2; PIB +3, Tourist Points +4;\n");
+    if(pibPerCapitaA > pibPerCapitaB){
+        printf("Resultado: Carta 1 (%s) venceu!\n", cityNameA);
+    } else if(pibPerCapitaA < pibPerCapitaB){
+        printf("Resultado: Carta 2 (%s) venceu!\n", cityNameB);
+    } else {
+        printf("Empate!\n");
+    }
 
     return 0;
 }
