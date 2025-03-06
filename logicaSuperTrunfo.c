@@ -103,6 +103,11 @@ int main() {
         printf("City B is the champignon uauuuu :O!!!!\n");
     }
 
+    printf("Scores: \n");
+    printf("City A: \n", scoreA);
+    printf("City B: \n", scoreB);
+    printf("Score Table: Population +1; Area +2; PIB +3, Tourist Points +4;\n");
+
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
 
